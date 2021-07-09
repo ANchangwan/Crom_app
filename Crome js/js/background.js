@@ -11,3 +11,4 @@ bgimage.src = `img/${chosenImage}`;
 
 
 document.body.appendChild(bgimage);
+bgimage.id = 'bgimage';
