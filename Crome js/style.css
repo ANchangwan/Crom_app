@@ -1,3 +1,43 @@
+body{
+  width: 100%;
+  text-align: center;
+  top:50%;
+  left:50%;
+
+
+출처: https://takeu.tistory.com/18 [takeU]
+}
 .hidden {
     display: none;
   }
+#bgimage{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  max-width:100%;
+  min-width:1880px;;
+  max-height:1400px;
+  min-height:1200px;
+  z-index:-5;
+  filter: brightness(100%);
+}
+#clock {
+  margin-top: 230px;
+  text-align: center;
+  font-size: 150px;
+}
+#login-form{
+  margin:10px 10px;
+  
+}
+#quote{
+  margin:10%;
+  font-size: 20px;
+}
+
+#weather{
+  position: absolute;
+  top:30px;
+  right:50px;
+}
