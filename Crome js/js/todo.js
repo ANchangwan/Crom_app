@@ -6,7 +6,7 @@ const TODOS_KEY = "todos"
 
 let toDos = [];
 
-const saveToDos = () => {
+const savedToDos = () => {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
@@ -14,7 +14,7 @@ const deleteToDo = (event) => {
     const li = event.target.parentElement;
     li.remove();
     toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
-    svaeToDos();
+    savedToDos(toDos);
 }
 
 const paintToDo = (newToDo) => {
@@ -40,15 +40,15 @@ const handleToDoSubmit = (event) => {
     };
     toDos.push(newToDoObj);
     paintToDo(newToDoObj);
-    saveToDos();
+    savedToDos();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-const savedToDos = localStorage.getItem(TODOS_KEY);
-
-if (savedToDos !== null) {
-    const parsedToDos = JSON.parse(savedToDos);
+const savedToDo = localStorage.getItem(TODOS_KEY);
+console.log(savedToDo);
+if (savedToDo !== null) {
+    const parsedToDos = JSON.parse(savedToDo);
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }else{
