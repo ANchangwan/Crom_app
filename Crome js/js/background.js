@@ -9,6 +9,5 @@ const bgimage = document.createElement("img");
 
 bgimage.src = `img/${chosenImage}`;
 
-
 document.body.appendChild(bgimage);
 bgimage.id = 'bgimage';
